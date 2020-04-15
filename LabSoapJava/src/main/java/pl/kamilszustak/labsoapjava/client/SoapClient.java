@@ -11,7 +11,7 @@ import pl.kamilszustak.labsoapjava.schemas.api.ResultsResponse;
 
 @Component
 public class SoapClient {
-    private SoapConnector soapConnector;
+    private final SoapConnector soapConnector;
 
     @Autowired
     public SoapClient(SoapConnector soapConnector) {
