@@ -21,10 +21,12 @@ class SoapClient @Autowired constructor(
             this.student = "John Smith"
         }
 
-        val response = soapConnector.callService(request) as? RegisterCallResponse
+        val response = soapConnector.call(request) as? RegisterCallResponse
         if (response != null) {
+            println("REGISTER CALL")
             println("Name: ${response.exercise.name}")
             println("Note: ${response.exercise.note}")
+            println()
         }
     }
 
@@ -33,9 +35,11 @@ class SoapClient @Autowired constructor(
             this.student = "John Smith"
         }
 
-        val response = soapConnector.callService(request) as? ResultsResponse
+        val response = soapConnector.call(request) as? ResultsResponse
         if (response != null) {
+            println("RESULTS")
             println("Entry: ${response.entry}")
+            println()
         }
     }
 }

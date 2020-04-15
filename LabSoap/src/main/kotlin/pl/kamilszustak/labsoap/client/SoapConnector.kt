@@ -7,6 +7,6 @@ class SoapConnector : WebServiceGatewaySupport() {
     @Value("\${base-url}")
     private lateinit var baseUrl: String
 
-    fun callService(request: Any): Any? =
+    fun call(request: Any): Any? =
         webServiceTemplate.marshalSendAndReceive(baseUrl, request)
 }
