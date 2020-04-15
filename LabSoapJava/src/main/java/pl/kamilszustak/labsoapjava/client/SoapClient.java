@@ -32,7 +32,7 @@ public class SoapClient {
         if (response != null) {
             System.out.println("REGISTER CALL");
             System.out.println("Name: " + response.getExercise().getName());
-            System.out.println("Note: " + response.getExercise().getName());
+            System.out.println("Note: " + response.getExercise().getNote());
             System.out.println();
         }
     }
